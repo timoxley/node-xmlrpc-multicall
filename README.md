@@ -5,8 +5,10 @@ xmlrpc module](https://github.com/baalexander/node-xmlrpc/).
 
 [![build status](https://secure.travis-ci.org/timoxley/node-xmlrpc-multicall.png)](http://travis-ci.org/timoxley/node-xmlrpc-multicall)
 
-`system.multicall` simply allows you to send batch commands to an xml-rpc
-server. It returns the results as an array.
+`system.multicall` simply allows you to send a batch commands to an xml-rpc
+server. It returns the results of each command in an array in the same
+order they were called. Each result is an array of result values or a
+standard xml-rpc error object.
 
 ```js
 var xmlrpc = require('xmlrpc')
@@ -27,7 +29,9 @@ server.on('system.add', function(err, params, callback) {
 
 var client = xmlrpc.createClient('http://localhost:9005')
 
-// call multiple xml rpc methods
+// call multiple xml-rpc methods:
+// method name is the key
+// an array of parameters is the value
 client.methodCall('system.multicall', [
     {'system.add': [2, 2]},
     {'system.add': [4, 4]}
