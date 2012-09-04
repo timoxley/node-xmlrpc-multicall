@@ -1,9 +1,12 @@
 # XML-RPC Multicall
-Implements system.multicall RFC:
+Implements `system.multicall` RFC:
 http://mirrors.talideon.com/articles/multicall.html for [baalexander's
 xmlrpc module](https://github.com/baalexander/node-xmlrpc/).
 
 [![build status](https://secure.travis-ci.org/timoxley/node-xmlrpc-multicall.png)](http://travis-ci.org/timoxley/node-xmlrpc-multicall)
+
+`system.multicall` simply allows you to send batch commands to an xml-rpc
+server. It returns the results as an array.
 
 ```js
 var xmlrpc = require('xmlrpc')
