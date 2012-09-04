@@ -1,8 +1,9 @@
 # XML-RPC Multicall
-
 Implements system.multicall RFC:
 http://mirrors.talideon.com/articles/multicall.html for [baalexander's
 xmlrpc module](https://github.com/baalexander/node-xmlrpc/).
+
+[![build status](https://secure.travis-ci.org/timoxley/node-xmlrpc-multicall.png)](http://travis-ci.org/timoxley/node-xmlrpc-multicall)
 
 ```js
 var xmlrpc = require('xmlrpc')
